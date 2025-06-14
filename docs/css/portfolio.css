@@ -1,0 +1,74 @@
+body {
+font-family: 'Helvetica', sans-serif;
+background-color: #f9f9f9;
+color: #333;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: #4a90e2;
+color: white;
+padding: 0.5rem;
+text-align: center;
+}
+main {
+padding: 1rem;
+max-width: 920px;
+margin: auto;
+}
+section {
+margin-bottom: 2rem;
+}
+.achievements {
+background: #ccffff;
+padding: 1rem;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+margin-bottom: 1.5rem;
+}
+.achieve-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.achievements h3 {
+margin-top: 0;
+}
+.achievements img {
+max-width: 100%;
+border-radius: 6px;
+margin-top: 0.5rem;
+}
+footer {
+text-align: center;
+padding: 1rem;
+background: #eee;
+}
+a {
+color: #4a90e2;
+text-decoration: none;
+}
+#imageModal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+#imageModal img {
+  max-width: 90%;
+  max-height: 90%;
+}
+#imageModal span {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ポートフォリオ</title>
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
+  <header>
+    <h1>やえしーのアトリエ</h1>
+    <p>創作を支えるエンジニアに</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>自己紹介</h2>
+      <p>初めまして。名古屋市立大学大学院2年の八重代政弥です。大学ではバイオインフォマティクスを専攻しています。大学3年からプログラミングを独学で学び始め、趣味の二次元コンテンツをより快適に楽しめるよう、様々なツール作成に挑戦しています。将来的にはクリエイターの創作活動を支援することで、作品の魅力をより多くの人に届けられるようにしていきたいです。</p>
+    </section>
+
+    <section>
+      <h2>取り組み</h2>
+
+      <div class="achievements">
+        <div class="achieve-header">
+          <h3>機械学習を用いたキャラクターイラスト分類ツールの作成</h3>
+          <span class="achieve-date">2025.4～</span>
+        </div>
+        <p>日々SNSやサイトから収集してきた大量のキャラクターイラストを、機械学習を用いて絵師・キャラクターごとに自動分類するツールを開発しました。</p>
+        <p><strong>スキル:</strong> Python, PyTorch, torchvision, PIL</p>
+        <p><strong>特徴:</strong></p>
+        <ul>
+          <li>類似画像をクラスタリングし、教師データを半自動で作成</li>
+          <li>UI上で分類結果を確認・修正可能</li>
+          <li>絵師ごとの特徴にも対応できるよう、転移学習とデータ拡張を実施</li>
+        </ul>
+        <p><strong>成果:</strong> 約99%以上の精度で自動分類可能です。イラストを探す利便性が大幅に向上しました。</p>
+        <p><a href="https://github.com/asuna-yaesi/asuna/tree/main/machinelearning_sample">GitHubリポジトリで見る</a></p>
+      </div>
+
+      <div class="achievements">
+        <div class="achieve-header">
+          <h3>グッズ管理Webアプリの作成</h3>
+          <span>2024.4～</span>
+        </div>
+        <p>販売（配布）されたキャラクターグッズを　“図鑑のように”　をコンセプトに一覧で作成しつつ、未所持品や欲しいものを一目で把握できる仕組みも取り入れた、推し活を便利にするアプリを作成しました。</p>
+        <p><strong>スキル:</strong> Python, Selenium, ChromeDriver, JavaScript, HTML, Flask(テスト用), Jinja2 </p>
+        <p><strong>特徴:</strong>
+        <ul>
+          <li>JANコードを持つ商品はSeleniumを用いて自動抽出、残りの限定商品等は手動でデータベースに入力</li>
+          <li>ボタン操作1つで商品のステータス（入手済、未入手、欲しい）を変更でき、一目で把握できるUI</li>
+        </ul></p>
+        <p><strong>成果:</strong> 未所持のグッズの把握、所持しているグッズの記録、欲しいグッズの管理、新商品の把握、どれをとっても最高の使用感で、推し活がとても捗るようになりました。</p>
+
+        <img src="images/sample1.png" alt="グッズ管理アプリの画面例1" style="width: 200px; height: auto; margin-top: 10px; cursor: pointer;" onclick="openModal(this)">
+        <img src="images/sample2.png" alt="グッズ管理アプリの画面例2" style="width: 200px; height: auto; margin-top: 10px; cursor: pointer;" onclick="openModal(this)">
+        <p><a href="https://github.com/asuna-yaesi/asuna/tree/main/%E5%9B%B3%E9%91%91%E3%82%A2%E3%83%97%E3%83%AAsample">GitHubリポジトリで見る</a></p>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>連絡先</h2>
+      <p>Email: c247724@ed.nagoya-cu.ac.jp</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 yaeshiro masaya</p>
+  </footer>
+
+  <!-- モーダル画像用のHTML -->
+  <div id="imageModal">
+    <span onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="拡大画像">
+  </div>
+
+  <!-- モーダル表示用スクリプト -->
+  <script>
+    function openModal(img) {
+      document.getElementById('modalImage').src = img.src;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
